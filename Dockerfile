@@ -5,12 +5,13 @@ FROM ubuntu:14.04.4
 # RUN echo "deb http://archive.ubuntu.com/ubuntu/ $(lsb_release -sc) main universe" >> /etc/apt/sources.list
 
 # Update the sources list
-# RUN apt-get update
-# Copy the application folder inside the container
-ADD /app /app
+RUN apt-get update
 
 # Add python tools 
 RUN apt-get install python-pip
+# Copy the application folder inside the container
+ADD /app /app
+
 #
 RUN pip install -r /app/requirements.txt
 

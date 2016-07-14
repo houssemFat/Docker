@@ -4,7 +4,7 @@ FROM ubuntu
 RUN echo "deb http://archive.ubuntu.com/ubuntu/ $(lsb_release -sc) main universe" >> /etc/apt/sources.list
 
 # Update the sources list
-RUN apt-get update
+# RUN apt-get update
 # Copy the application folder inside the container
 ADD /app /app
 
@@ -12,7 +12,7 @@ ADD /app /app
 RUN apt-get install -y python python-dev python-distribute python-pip
 
 #
-RUN pip install -r /my_application/requirements.txt
+RUN pip install -r /app/requirements.txt
 
 # Set the default directory where CMD will execute
 WORKDIR /app

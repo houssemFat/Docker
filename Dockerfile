@@ -8,7 +8,7 @@ FROM ubuntu:14.04.4
 RUN apt-get update
 
 # Add python tools 
-RUN apt-get install python-pip
+RUN apt-get -y install python-pip
 # Copy the application folder inside the container
 ADD /app /app
 

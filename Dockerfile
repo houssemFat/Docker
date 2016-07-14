@@ -10,15 +10,18 @@ RUN apt-get update
 # Add python tools 
 RUN apt-get -y install python-pip
 # Copy the application folder inside the container
-ADD /app /app
+#ADD /app /app
 
 #
+RUN echo 'installing app'
 RUN pip install -r /app/requirements.txt
 
 # Set the default directory where CMD will execute
 WORKDIR /app
 EXPOSE 5000
+
 # Set the default command to execute    
 # when creating a new container
 # i.e. using 
-CMD python main.py
+RUN python main.py
+RUN echo 'ending launching app'

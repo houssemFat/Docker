@@ -10,8 +10,7 @@ FROM ubuntu:14.04.4
 ADD /app /app
 
 # Add python tools 
-RUN apt-get install -y python python-dev python-distribute python-pip
-
+RUN apt-get install python-pip
 #
 RUN pip install -r /app/requirements.txt
 

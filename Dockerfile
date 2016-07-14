@@ -1,2 +1,2 @@
 FROM ubuntu
-echo 'hies'
+CMD echo 'hies'

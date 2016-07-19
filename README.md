@@ -10,3 +10,4 @@
 3) run with export , port 5000
 
 `docker run  -p 5000:5000 tuto:latest`
+// https://docs.docker.com/docker-for-windows/

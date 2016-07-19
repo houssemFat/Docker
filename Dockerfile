@@ -18,11 +18,11 @@ ADD /app /app
 WORKDIR /app
 RUN echo 'installing app'
 RUN pip install -r requirements.txt
-EXPOSE 5000
+# EXPOSE 5000
 
 # Set the default command to execute    
 # when creating a new container
 # i.e. using 
 
-RUN echo 'ending launching app'
-RUN python main.py
+ENTRYPOINT ["python"]
+CMD ["main.py"]

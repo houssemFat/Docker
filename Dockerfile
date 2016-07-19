@@ -23,5 +23,6 @@ EXPOSE 5000
 # Set the default command to execute    
 # when creating a new container
 # i.e. using 
-RUN python main.py
+
 RUN echo 'ending launching app'
+RUN python main.py
